@@ -28,6 +28,7 @@ class App extends React.Component {
     this.props.store.dispatch(setShowFavourites(val));
   }
   render() {
+    console.log(this.props.store.getState());
     const { movies } = this.props.store.getState();
     const { list, favourites, showFavourites } = movies;
     const displayMovies = showFavourites ? favourites : list;
